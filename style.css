@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/Fraunces-Bold.otf") format("opentype");
+  font-weight: 100;
+}
+/**{
+    border: 0.5px solid blue;
+}*/
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  display: block;
+  box-sizing: border-box; /* The box border applies to the inside of the div and not to the outside */
+  font-family: "Fraunces", serif;
+}
+
+#special {
+  bottom: 150px !important;
+  left: 45%;
+}
+
+h1 {
+  margin-top: 5%;
+}
+
+p {
+  color: white;
+  font-size: 22px;
+  line-height: 2;
+  margin: 5vw 2vw 6vw 6vw;
+}
+
+a {
+  color: white;
+  font-size: 28px;
+  text-decoration: none;
+  margin: 5% 10%;
+}
+
+img {
+  opacity: 0.9;
+  border-radius: 2%;
+}
+
+.content {
+  margin-left: 25px;
+}
+
+.image-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-flex-container img {
+  opacity: 1;
+  object-fit: contain;
+}
+
+.image-flex-container img:hover {
+  opacity: 1;
+}
+
+.two {
+  width: 48%;
+}
+
+.one {
+  width: 100%;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin: 5%;
+}
+
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  margin-left: 5%;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 60%;
+  text-align: center;
+  margin-left: 15vw;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    margin: 10vw;
+    margin-left: 10vw;
+    max-width: 70%;
+  }
+
+  .contact {
+    width: 500px;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 280px;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  background: black;
+  border: 3px solid #f04a49;
+  z-index: 20;
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  z-index: -1;
+}
+
+button {
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: blue;
+  font-size: 25px;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #f04a49;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
