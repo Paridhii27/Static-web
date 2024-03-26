@@ -45,6 +45,11 @@ img {
   border-radius: 2%;
 }
 
+#canvasContainer {
+  position: relative;
+  display: inline-block; /* Or 'block' depending on your layout */
+}
+
 .content {
   margin-left: 25px;
 }
@@ -61,10 +66,6 @@ img {
 
 .image-flex-container img:hover {
   opacity: 1;
-}
-
-.two {
-  width: 48%;
 }
 
 .one {
@@ -94,15 +95,6 @@ img {
   width: 100%;
 }
 
-.contacts {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  width: 60%;
-  text-align: center;
-  margin-left: 15vw;
-}
-
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -121,59 +113,4 @@ img {
     margin-left: 10vw;
     max-width: 70%;
   }
-
-  .contact {
-    width: 500px;
-  }
-}
-
-.popup {
-  display: none;
-  position: fixed;
-  padding: 10px;
-  width: 280px;
-  left: 50%;
-  margin-left: -150px;
-  height: 180px;
-  top: 50%;
-  margin-top: -100px;
-  background: black;
-  border: 3px solid #f04a49;
-  z-index: 20;
-}
-
-#popup:after {
-  position: fixed;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -2;
-}
-
-#popup:before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: black;
-  z-index: -1;
-}
-
-button {
-  margin-top: 50px;
-  background-color: rgba(255, 255, 255, 0.3);
-  color: blue;
-  font-size: 25px;
-  padding: 10px 20px;
-}
-
-button:hover {
-  background-color: #f04a49;
-  color: #fff;
-  transition: all 0.3s ease 0s;
 }
